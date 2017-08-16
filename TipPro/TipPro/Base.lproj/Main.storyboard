@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBU-US-jBx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                <color key="backgroundColor" red="0.093179993331432343" green="0.61171364784240723" blue="0.84475058317184448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="rXj-DH-h4d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.50505990932642486" green="0.31685162312965137" blue="0.49398019363245671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vxo-d1-m9h" userLabel="Super Stack View">
+                                <rect key="frame" x="66" y="100" width="188" height="370"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dib-QM-5Ps" userLabel="Bill Amount Satck View">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdo-q1-LrR">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54g-DC-kHG" userLabel="Bill Amount Text Field">
+                                                <rect key="frame" x="103" y="0.0" width="85" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="wk7-If-Swu"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PH4-ge-2Vx" userLabel="Tip % Stack View">
+                                        <rect key="frame" x="0.0" y="35.5" width="188" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skx-c5-MTT">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fWZ-Xi-l5A" userLabel="Tip % Segmented Controller">
+                                                <rect key="frame" x="63" y="0.0" width="125" height="21.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="125" id="4cZ-7h-h52"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="15%"/>
+                                                    <segment title="18%"/>
+                                                    <segment title="20%"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="599-Sv-Ait" userLabel="Tip Amount Stack View">
+                                        <rect key="frame" x="0.0" y="71" width="188" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3k5-CH-vXW">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="day-HJ-Upd" userLabel="Tip Amount Text Field">
+                                                <rect key="frame" x="103" y="0.0" width="85" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="EUc-wV-uN3"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JlP-MG-k1k" userLabel="Total Satck View">
+                                        <rect key="frame" x="0.0" y="106.5" width="188" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebv-h0-Mwd">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rd-CR-Sde" userLabel="Total Text Field">
+                                                <rect key="frame" x="103" y="0.0" width="85" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="pui-J2-lcg"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eZ-Qx-sFh">
+                                        <rect key="frame" x="0.0" y="142" width="188" height="25"/>
+                                        <color key="backgroundColor" red="0.093179993331432343" green="0.61171364784240723" blue="0.84475058317184448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Calculate">
+                                            <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9GA-Pi-VdX"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="S29-Bb-dzL">
+                                        <rect key="frame" x="0.0" y="182" width="188" height="188"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="S29-Bb-dzL" secondAttribute="height" multiplier="1:1" id="iye-tG-lg4"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JlP-MG-k1k" firstAttribute="width" secondItem="vxo-d1-m9h" secondAttribute="width" id="2QG-Ws-QxA"/>
+                                    <constraint firstItem="Dib-QM-5Ps" firstAttribute="width" secondItem="vxo-d1-m9h" secondAttribute="width" id="FTm-B1-Jun"/>
+                                    <constraint firstItem="PH4-ge-2Vx" firstAttribute="width" secondItem="vxo-d1-m9h" secondAttribute="width" id="I8o-lI-lpK"/>
+                                    <constraint firstItem="599-Sv-Ait" firstAttribute="width" secondItem="vxo-d1-m9h" secondAttribute="width" id="Jcj-hi-maA"/>
+                                    <constraint firstItem="8eZ-Qx-sFh" firstAttribute="width" secondItem="vxo-d1-m9h" secondAttribute="width" id="gse-fl-ob8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vxo-d1-m9h" firstAttribute="top" secondItem="qBU-US-jBx" secondAttribute="bottom" constant="20" id="1fW-Gv-ZXj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vxo-d1-m9h" secondAttribute="trailing" constant="50" id="1v1-D4-FxM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="S29-Bb-dzL" secondAttribute="bottom" constant="10" id="9Tb-po-K7I"/>
+                            <constraint firstItem="qBU-US-jBx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Bxa-5h-O5W"/>
+                            <constraint firstItem="qBU-US-jBx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="YuM-E2-NdC"/>
+                            <constraint firstItem="vxo-d1-m9h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="of6-HI-WiO"/>
+                            <constraint firstItem="qBU-US-jBx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vjY-YL-yB0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="billAmountField" destination="54g-DC-kHG" id="xAH-a0-adh"/>
+                        <outlet property="tipAmountField" destination="day-HJ-Upd" id="ElB-0D-cdA"/>
+                        <outlet property="tipSelector" destination="fWZ-Xi-l5A" id="cLz-lb-uOU"/>
+                        <outlet property="totalAmountField" destination="6rd-CR-Sde" id="nDO-51-8vP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="-1594"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="450" height="450"/>
+    </resources>
+</document>
