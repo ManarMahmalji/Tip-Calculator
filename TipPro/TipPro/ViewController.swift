@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             default:
                 break
             }
-            let roundedBillAmount = round(100*billAmount)/100
+            let roundedBillAmount = round(100*billAmount)/100  
             let tipAmount = roundedBillAmount*tipPercentage
             let roundedTipAmount = round(100*tipAmount)/100
             let totalAmount = roundedBillAmount + roundedTipAmount
